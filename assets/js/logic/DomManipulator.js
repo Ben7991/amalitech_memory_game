@@ -492,6 +492,10 @@ class DomManipulator
         if (!gameScreenFooter.classList.contains('d-none'))
             gameScreenFooter.classList.add('d-none');
 
+        const gameMenu = document.querySelector('.game-menu');
+        if (!gameMenu.classList.contains('d-none'))
+            gameMenu.classList.add('d-none');
+
         document.querySelector('#single-player-time').textContent = "0";
         document.querySelector('#single-player-moves').textContent = "0";
 
