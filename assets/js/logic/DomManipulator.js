@@ -300,7 +300,9 @@ class DomManipulator
             if (!currentTurnText.classList.contains('d-none'))
                 currentTurnText.classList.add('d-none');
         });
-        currentTurnTexts[this.currentPlayer - 1].classList.remove('d-none');
+
+        if (window.innerWidth > 1200)
+            currentTurnTexts[this.currentPlayer - 1].classList.remove('d-none');
     }
 
     gameScreenFooter() {
