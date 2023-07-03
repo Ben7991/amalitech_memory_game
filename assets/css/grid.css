@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-6 {
+    flex-basis: 48%;
+}
+
+.col-3 {
+    flex-basis: 23%;
+}
+
+.col-4 { flex-basis: 32%; }
+
+.col-2 { flex-basis: 8.33%; }
+
+@media (min-width: 768px) {
+    .col-md-3 { flex-basis: 23%; }
+    .col-md-4 { flex-basis: 32.5%; }
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex-basis: 32.5%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-3 {
+        flex-basis: 23%;
+    }
+}

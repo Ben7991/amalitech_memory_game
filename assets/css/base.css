@@ -1,0 +1,7 @@
+body {
+    font-family: 'Atkinson Hyperiegible', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-gray { background-color: gray; }

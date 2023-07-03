@@ -1,0 +1,438 @@
+* {box-sizing: border-box;}
+
+.start-up {
+    width: 100%;
+    height: 100vh;
+    background-color: #304859;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.start-up__heading {
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.start-up__container {
+    width: 90%;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    padding: 15px;
+}
+
+.start-up__section-heading  {
+    color: var(--color-dark-light);
+    margin-bottom: 10px;
+}
+
+.start-up__start-btn {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    display: block;
+    margin-top: 30px;
+}
+
+.start-up__start-btn:hover {
+    background-color: var(--color-orange-hover);
+}
+
+@media (min-width: 768px) {
+    .start-up__container {
+        padding: 30px;
+    }
+
+    .start-up__heading {
+        font-size: 2.5em;
+    }
+
+    .start-up__section-heading {
+        font-size: 1.25em;
+    }
+
+    .start-up__start-btn {
+        font-size: 2em;
+        border-radius: 30px;
+        margin-top: 35px;
+    }
+}
+
+@media (min-width: 992px) {
+    .start-up__container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .start-up { padding: 0; }
+
+    .start-up__container {
+        width: 48%;
+        padding: 20px 30px;
+    }
+
+    .start-up__section-heading {
+        margin-top: 0;
+    }
+
+    .start-up__heading {
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .start-up__container {
+        width: 45%;
+        padding: 50px;
+    }
+
+    .start-up__start-btn {
+        margin-top: 40px;
+    }
+}
+
+
+.game {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-white);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.game__heading { margin: 0; }
+
+.game__btn-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.game__player::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%) rotate(45deg);
+    background-color: transparent;
+}
+
+.game__player:hover::before {
+    background-color: var(--color-orange);;
+}
+
+.game__player {
+    background-color: var(--color-player);
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 5;
+}
+
+.game__player:hover {
+    background-color: var(--color-orange);
+}
+
+.game__player-heading-sub {
+    color: var(--color-dark-light);
+    margin: 0;
+}
+
+.game__player:hover .game__player-heading-sub,
+.game__player:hover .game__player-heading {
+    color: var(--color-white);
+}
+
+.game__player--active,
+.game__player--active::before { 
+    background-color: var(--color-orange) !important; 
+}
+
+.game__player--active h5,
+.game__player--active h3 { color: var(--color-white) !important; }
+
+.game__player-heading {
+    color: var(--color-dark);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.game__action {
+    display: none;
+}
+
+.game__single-player-section {
+    padding: 15px;
+    text-align: center;
+    background-color: var(--color-player);
+    border-radius: 5px;
+}
+
+.game__single-player-subtitle,
+.game__single-player-title {
+    font: inherit;
+    font-weight: bold;
+    margin: 0;
+}
+
+.game__single-player-subtitle {
+    color: var(--single-player-subtitle);
+}
+
+.game__single-player-title {
+    font-size: 1.5em;
+    color: var(--color-dark);
+    margin-top: 7px;
+}
+
+.game-menu,
+.game-over-multiplayer,
+.game-over-single {
+    background-color: var(--color-modal-shadow);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.game-menu--hide {
+    display: none;
+}
+
+.game-menu__container,
+.game-over-multiplayer__container,
+.game-over-single__container {
+    flex-basis: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.game-menu__btn,
+.game-over__btn {
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-player);
+    color: var(--color-dark);
+}
+
+.game-menu__btn--orange {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+.game-over__player {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.game-over__heading {
+    margin: 2px;
+}
+
+.game-over__subtitle {
+    font-weight: bold;
+    color: var(--color-dark-light);
+}
+
+.game-over__heading,
+.game-over__subtitle {
+    text-align: center;
+}
+
+.game-over__player-description,
+.game-over__player-info,
+.game-over__subtitle {
+    margin: 0;
+}
+
+.game-over__player-description {
+    font-weight: bold;
+    color: var(--color-dark-light);
+    font-size: 0.85em;
+}
+
+.game-over__player-section,
+.game-over__single-player {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--color-player);
+    border-radius: 5px;
+}
+
+.game-over__player-section:not(:last-child),
+.game-over__single-player:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.game-over__player-section.active {
+    background-color: var(--color-dark) !important;
+    color: var(--color-white) !important;
+}
+
+.game-over__player-section.active .game-over__player-description {
+    color: var(--color-white);
+}
+
+.game-over__action {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .game { padding: 30px; }
+
+    .game__heading { font-size: 2.5em; }
+
+    .game__btn-container,
+    .game__single-player {
+        width: 73%;
+        margin: auto;
+    }
+
+    .game__player {
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .game-menu__container,
+    .game-over-multiplayer__container,
+    .game-over-single__container {
+        flex-basis: 80%;
+    }
+
+    .game__action {
+        display: flex;
+        column-gap: 15px;
+    }
+
+    .game-over__action {
+        flex-direction: row;
+    }
+
+    .game__single-player-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .game__single-player-subtitle,
+    .game__single-player-title {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .game__container,
+    .game__multi-player {
+        width: 80%;
+        margin: auto;
+    }
+
+    .game__btn-container,
+    .game__single-player {
+        width: 35%;
+    }
+
+    .game__player {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .game__player-heading-sub,
+    .game__player-heading {
+        margin: 0;
+    }
+
+    .game-menu__container,
+    .game-over-multiplayer__container,
+    .game-over-single__container {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .game {
+        padding: 10px 0;
+    }
+
+    .game__container,
+    .game__multi-player {
+        width: 80%;
+        margin: auto;
+    }
+
+    .game__btn-container,
+    .game__single-player {
+        width: 30%;
+    }
+
+    .game__desktop-player {
+        display: flex;
+    }
+
+    .game__player-current {
+        text-align: center;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font-size: 0.8125em;
+    }
+
+    .game-menu__container,
+    .game-over-multiplayer__container,
+    .game-over-single__container {
+        flex-basis: 35%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .game__container,
+    .game__multi-player {
+        width: 70%;
+        max-width: 1200px;
+    }
+
+    .game__btn-container,
+    .game__single-player {
+        width: 29%;
+        max-width: 400px;
+    }
+
+    .game-menu__container,
+    .game-over-multiplayer__container,
+    .game-over-single__container {
+        flex-basis: 30%;
+    }
+}
+
+
+
+

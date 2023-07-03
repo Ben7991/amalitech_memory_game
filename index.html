@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/variables.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/button.css">
+    <link rel="stylesheet" href="./assets/css/utility.css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+    <title>Frontend Mentor | Memory game</title>
+</head>
+<body>
+    <main class="main">
+        <!-- start up -->
+        <section class="start-up">
+            <h1 class="start-up__heading">memory</h1>
+            <div class="start-up__container">
+                <div class="container">
+                    <h5 class="start-up__section-heading">Select Theme</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn--dark btn-theme-number">Numbers</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn--light btn-theme-icon">Icons</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <h5 class="start-up__section-heading">Numbers of Players</h5>
+                    <div class="row">
+                        <div class="col-3">
+                            <button class="btn btn--dark btn-players">1</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn--light btn-players">2</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn--light btn-players">3</button>
+                        </div>
+                        <div class="col-3">
+                            <button class="btn btn--light btn-players">4</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <h5 class="start-up__section-heading">Grid Size</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn--dark btn-game-grid-4">4x4</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn--light btn-game-grid-6">6x6</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="start-up__start-btn btn-start-game">Start Game</button>
+            </div>
+        </section>
+
+        <!-- game -->
+        <section class="game d-none">
+            <div class="game__container">
+                <div class="row align-items-center">
+                    <div class="col-4">
+                        <h3 class="game__heading">memory</h3>
+                    </div>
+                    <div class="col-2 col-md-4">
+                        <button class="btn-menu btn--orange btn--mobile">Menu</button>
+                        <div class="game__action">
+                            <button class="btn-menu btn--orange restart-game">Restart</button>
+                            <button class="btn-menu btn--light btn-new-game">New Game</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game__btn-container">
+                <!-- <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn&  #45;&#45;game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button>
+                <button class="btn btn--dark btn--game btn--grid-4">1</button> -->
+
+                <!-- <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button>
+                <button class="btn btn--orange btn--game btn--grid-6">1</button> -->
+            </div>
+
+            <div class="row game__multi-player d-none" id="multi-player">
+                <!-- <div class="col-3">
+                    <div class="game__player-holder">
+                        <div class="game__player game__player--active">
+                            <h5 class="game__player-heading-sub">P1</h5>
+                            <h3 class="game__player-heading">P1</h3>
+                        </div>
+                        <p class="game__player-current">Current Turn</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game__player-holder">
+                        <div class="game__player">
+                            <h5 class="game__player-heading-sub">P1</h5>
+                            <h3 class="game__player-heading">P1</h3>
+                        </div>
+                        <p class="game__player-current">Current Turn</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game__player-holder">
+                        <div class="game__player">
+                            <h5 class="game__player-heading-sub">P1</h5>
+                            <h3 class="game__player-heading">P1</h3>
+                        </div>
+                        <p class="game__player-current">Current Turn</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="game__player-holder">
+                        <div class="game__player">
+                            <h5 class="game__player-heading-sub">P1</h5>
+                            <h3 class="game__player-heading">P1</h3>
+                        </div>
+                        <p class="game__player-current">Current Turn</p>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="row game__single-player d-none" id="single-player">
+                <div class="col-6">
+                    <div class="game__single-player-section">
+                        <h5 class="game__single-player-subtitle">Time</h5>
+                        <h2 class="game__single-player-title" id="single-player-time">0</h2>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="game__single-player-section">
+                        <h5 class="game__single-player-subtitle">Moves</h5>
+                        <h2 class="game__single-player-title" id="single-player-moves">0</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-menu d-none">
+                <div class="game-menu__container">
+                    <button class="game-menu__btn game-menu__btn--orange restart-game">Restart</button>
+                    <button class="game-menu__btn btn-new-game">New Game</button>
+                    <button class="game-menu__btn resume-game">Resume Game</button>
+                </div>
+            </div>
+
+            <div class="game-over-multiplayer d-none">
+                <div class="game-over-multiplayer__container">
+                    <h1 class="game-over__heading">Player 3 Wins!</h1>
+                    <p class="game-over__subtitle">Game over! Here are the results...</p>
+                    <div class="game-over__player">
+                        <!-- <div class="game-over__player-section active">
+                            <p class="game-over__player-description">Player 3 (Winner)</p>
+                            <h3 class="game-over__player-info">8 Pairs</h3>
+                        </div>
+                        <div class="game-over__player-section">
+                            <p class="game-over__player-description">Player 1</p>
+                            <h3 class="game-over__player-info">8 Pairs</h3>
+                        </div>
+                        <div class="game-over__player-section">
+                            <p class="game-over__player-description">Player 2</p>
+                            <h3 class="game-over__player-info">8 Pairs</h3>
+                        </div>
+                        <div class="game-over__player-section">
+                            <p class="game-over__player-description">Player 4</p>
+                            <h3 class="game-over__player-info">8 Pairs</h3>
+                        </div> -->
+                    </div>
+                    <div class="game-over__action">
+                        <button class="game-over__btn game-menu__btn--orange restart-game">Restart</button>
+                        <button class="game-over__btn btn-new-game">Setup New Game</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-over-single d-none">
+                <div class="game-over-single__container">
+                    <h1 class="game-over__heading">You did it!</h1>
+                    <div class="game-over__subtitle">Game over! Here's how you got on...</div>
+                    
+                    <div class="game-over__player">
+                        <div class="game-over__single-player">
+                            <p class="game-over__player-description">Time Elapsed</p>
+                            <h3 class="game-over__player-info game-single-timer">0</h3>
+                        </div>
+                        <div class="game-over__single-player">
+                            <p class="game-over__player-description">Moves Taken</p>
+                            <h3 class="game-over__player-info game-single-moves">0 Moves</h3>
+                        </div> 
+                    </div>
+                    
+                    <div class="game-over__action">
+                        <button class="game-over__btn game-menu__btn--orange restart-game">Restart</button>
+                        <button class="game-over__btn btn-new-game">Setup New Game</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./assets/js/index.js" type="module"></script>
+</body>
+</html>

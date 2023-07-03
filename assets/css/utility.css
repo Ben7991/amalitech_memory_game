@@ -1,0 +1,7 @@
+.align-items-center { align-items: center; }
+.bg-orange {
+    background-color: var(--color-orange) !important;
+}
+.d-none {
+    display: none !important;
+}

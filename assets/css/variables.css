@@ -1,0 +1,13 @@
+:root {
+    --color-dark: #304859;
+    --color-white: #fcfcfc;
+    --color-light: #bcced9;
+    --color-orange: #fda214;
+    --color-orange-hover: #ffb84a;
+    --color-dark-light: #7191a5;
+    --color-btn-hover: #6395b8;
+    --color-player: #dfe7ec;
+
+    --single-player-subtitle: #7191A5;
+    --color-modal-shadow: rgba(0,0,0,0.5);
+}
