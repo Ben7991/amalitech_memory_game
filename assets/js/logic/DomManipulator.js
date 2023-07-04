@@ -457,6 +457,9 @@ class DomManipulator
         document.querySelectorAll('.game-over__player-section').forEach(playerSection => {
             playerSection.remove();
         });
+
+        this.currentPlayer = 1;
+        this.moveToNextPlayer();
     }
 
     newGame() {
@@ -506,6 +509,7 @@ class DomManipulator
 
     resetMultiPlayerGameScreen() {
         this.#game.resetPlayers();
+
         const gameOverModal = document.querySelector('.game-over-multiplayer');
         if (!gameOverModal.classList.contains('d-none'))
             gameOverModal.classList.add('d-none');
@@ -517,8 +521,6 @@ class DomManipulator
         document.querySelectorAll('.game-over__player-section').forEach(playerSection => {
             playerSection.remove();
         });
-
-        
     }
 
     resetPreviousStartGameScreen() {
